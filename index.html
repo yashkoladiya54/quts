@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+</head>
+<body>
+    <body>
+        <p id="Quote"></p>
+        <button id="newquote">click</button>
+    </body>
+    <script>
+        var Quote = [
+           "I didn't know there were so many",
+           "many of those books are out of print",
+           "you can have as many as you like",
+           "I have as many books as you",
+           "I've told you this many times",
+           "how many will come?",
+           "I don't have very many books",
+           "there are too many"
+
+        ]
+
+        function random (){
+            var random = Math.floor(Math.random()*Quote.length)
+            return Quote [random]
+        }
+
+        function display(){
+            var dis = document.getElementById("Quote")
+            dis.innerHTML = random()
+        }
+
+        document.getElementById("newquote").addEventListener("click", display)
+    </script>
+</body>
+</html>
