@@ -7,33 +7,50 @@
 </head>
 <body>
     <body>
-        <p id="Quote"></p>
-        <button id="newquote">click</button>
+        <h1 id="countdown">20</h1>
+
+        <!-- <p id="Quote"></p>
+        <button id="newquote">click</button> -->
     </body>
     <script>
-        var Quote = [
-           "I didn't know there were so many",
-           "many of those books are out of print",
-           "you can have as many as you like",
-           "I have as many books as you",
-           "I've told you this many times",
-           "how many will come?",
-           "I don't have very many books",
-           "there are too many"
+        // var Quote = [
+        //    "I didn't know there were so many",
+        //    "many of those books are out of print",
+        //    "you can have as many as you like",
+        //    "I have as many books as you",
+        //    "I've told you this many times",
+        //    "how many will come?",
+        //    "I don't have very many books",
+        //    "there are too many"
 
-        ]
+        // ]
 
-        function random (){
-            var random = Math.floor(Math.random()*Quote.length)
-            return Quote [random]
-        }
+        // function random (){
+        //     var random = Math.floor(Math.random()*Quote.length)
+        //     return Quote [random]
+        // }
 
-        function display(){
-            var dis = document.getElementById("Quote")
-            dis.innerHTML = random()
-        }
+        // function display(){
+        //     var dis = document.getElementById("Quote")
+        //     dis.innerHTML = random()
+        // }
 
-        document.getElementById("newquote").addEventListener("click", display)
+        // document.getElementById("newquote").addEventListener("click", display)
+
+        let countdownvalue=20;
+
+        const countdown=setInterval(()=>{
+            document.getElementById("countdown").innerText=countdownvalue;
+            countdownvalue--;
+
+            if(countdownvalue<0){
+                clearInterval(countdown);
+                document.getElementById("countdown").innerText="Time End"
+            }
+        },1200)
+
+
+        
     </script>
 </body>
 </html>
